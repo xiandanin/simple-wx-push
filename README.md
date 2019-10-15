@@ -23,7 +23,7 @@ node api.js
 ### PM2启动
 
 ```
-pm2 start api.js wx_push
+pm2 start api.js --name wx_push
 ```
 
 ## API
