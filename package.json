@@ -1,0 +1,28 @@
+{
+  "name": "simple-wx-push",
+  "version": "1.0.0",
+  "description": "简易版推送消息到自己微信",
+  "main": "api.js",
+  "scripts": {
+    "dev": "nodemon node api.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dengyuhan/simple-wx-push.git"
+  },
+  "author": "denghahae",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dengyuhan/simple-wx-push/issues"
+  },
+  "homepage": "https://github.com/dengyuhan/simple-wx-push#readme",
+  "dependencies": {
+    "got": "^9.6.0",
+    "koa": "^2.8.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-ejs": "^4.2.0",
+    "koa-router": "^7.4.0",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.26"
+  }
+}

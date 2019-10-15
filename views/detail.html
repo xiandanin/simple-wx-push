@@ -1,0 +1,25 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="robots" content="noindex,noarchive,nofollow">
+    <title><%- detail.title -%></title>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    .card{
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+        border: none;
+    }
+</style>
+
+<div class="container mt-3 mt-md-5">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title"><%- detail.title -%></h5>
+            <p class="card-subtitle mb-2 text-muted"><%- detail.time -%></p>
+            <div class="card-text"><%- detail.message -%></div>
+        </div>
+    </div>
+</div>
+
+</html>
