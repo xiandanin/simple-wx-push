@@ -38,7 +38,7 @@ router.get('/detail', async (ctx) => {
 
 app.use(router.routes()).use(router.allowedMethods())
 
-const port = parseInt(process.env.PORT || 9400)
+const port = parseInt(process.env.PORT || 9401)
 const server = app.listen(port, function () {
     let host = server.address().address
     console.info("启动成功，访问地址为 http://%s:%s", host === '::' ? "localhost" : host, port)
