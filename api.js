@@ -30,7 +30,6 @@ router.get('/detail', async (ctx) => {
         time: ctx.query.time,
         message: ctx.query.message.replace(new RegExp(/\\n/g), "<br/>")
     }
-    console.debug(ctx.state.detail)
     await ctx.render('detail')
 })
 
