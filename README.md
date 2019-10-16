@@ -38,6 +38,5 @@ POST | GET
 ```
 | 参数名 | 是否必选 |
 |:-:|:-:|
-| title | 否 |
 | url | 否 |
 | message | 是 |
