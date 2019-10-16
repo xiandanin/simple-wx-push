@@ -32,14 +32,14 @@ async function obtainAccessToken () {
     return cacheAccessToken
 }
 
-async function pushMessage (title, message, origin) {
+async function pushMessage (title, message, redirectUrl) {
     const touser = config.recipient
     const templateID = config.template_id
 
     const accessToken = await obtainAccessToken()
     const url = util.format('https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=%s', accessToken)
     const now = formatNow()
-    const redirectUrl = util.format('%s/detail?title=%s&time=%s&message=%s', origin, title, now, message)
+    //const redirectUrl = util.format('%s/detail?title=%s&time=%s&message=%s', origin, title, now, message)
     const body = JSON.stringify({
         touser: touser,
         template_id: templateID,

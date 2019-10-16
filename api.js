@@ -14,13 +14,11 @@ render(app, {
     debug: false
 })
 
-
-router.post('/push', async (ctx) => {
-    const origin = ctx.request.origin
-    const title = ctx.request.body.title || "消息提醒"
-    const message = ctx.request.body.message
-    if (message) {
-        ctx.body = await wxpush.pushMessage(title, message, origin)
+router.all('/push', async (ctx) => {
+    const params = ctx.method === 'POST' ? ctx.request.body : ctx.query
+    const title = params.title || "消息提醒"
+    if (params.message) {
+        ctx.body = await wxpush.pushMessage(title, params.message, params.url)
     } else {
         ctx.body = {errcode: 400, errmsg: "内容不能为空"}
     }
@@ -30,7 +28,7 @@ router.get('/detail', async (ctx) => {
     ctx.state.detail = {
         title: ctx.query.title,
         time: ctx.query.time,
-        message: ctx.query.message.replace(new RegExp(/\\n/g),"<br/>")
+        message: ctx.query.message.replace(new RegExp(/\\n/g), "<br/>")
     }
     console.debug(ctx.state.detail)
     await ctx.render('detail')

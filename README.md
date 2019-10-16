@@ -27,7 +27,7 @@ pm2 start api.js --name wx_push
 ```
 
 ## API
-POST
+POST | GET
 
 ```
 /push
@@ -35,4 +35,5 @@ POST
 | 参数名 | 是否必选 |
 |:-:|:-:|
 | title | 否 |
+| url | 否 |
 | message | 是 |
