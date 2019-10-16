@@ -1,7 +1,11 @@
 ## 配置
 [注册测试号](https://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&t=sandbox/index)
 
-根目录创建文件`config_custom.js`
+增加消息模板`{{message.DATA}}`
+
+<img src="screenshot.jpg" width="300"/>
+
+根目录创建文件`config_custom.js`，也可以直接修改`config.js`
 
 ```
 module.exports = {
