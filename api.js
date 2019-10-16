@@ -26,9 +26,9 @@ router.all('/push', async (ctx) => {
 
 router.get('/detail', async (ctx) => {
     ctx.state.detail = {
-        title: decodeURIComponent(ctx.query.title),
+        title: ctx.query.title,
         time: ctx.query.time,
-        message: decodeURIComponent(ctx.query.message).replace(new RegExp(/\\n/g), "<br/>")
+        message: ctx.query.message.replace(new RegExp(/\\n/g), "<br/>")
     }
     await ctx.render('detail')
 })
